@@ -1,0 +1,51 @@
+<h2 mat-dialog-title>Editar Ponto de Descarte</h2>
+<div mat-dialog-content>
+
+  <div style="display: flex; gap: 30px;">
+    <div style="display: flex;flex-direction: column;">
+      <mat-label>Latitude:</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="" [(ngModel)]="lat">
+      </mat-form-field>
+      <mat-label>Cep:</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="" [(ngModel)]="cep">
+      </mat-form-field>
+      <mat-label>Rua:</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="" [(ngModel)]="rua">
+      </mat-form-field>
+      <mat-label>Número:</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="" [(ngModel)]="numero">
+      </mat-form-field>
+      <mat-label>Tipo de descarte:</mat-label>
+      <mat-form-field>
+        <input matInput placeholder="" [(ngModel)]="tipoDescarte">
+      </mat-form-field>
+    </div>
+    <div style="display: flex;flex-direction: column;">
+      <mat-label>Longitude:</mat-label>
+      <mat-form-field >
+        <input matInput placeholder="" [(ngModel)]="long">
+      </mat-form-field>
+      <mat-label>Cidade:</mat-label>
+      <mat-form-field >
+        <input matInput placeholder="" [(ngModel)]="cidade">
+      </mat-form-field>
+      <mat-label>Bairro:</mat-label>
+      <mat-form-field >
+        <input matInput placeholder="" [(ngModel)]="bairro">
+      </mat-form-field>
+      <mat-label>Estado:</mat-label>
+      <mat-form-field >
+        <input matInput placeholder="" [(ngModel)]="estado">
+      </mat-form-field>
+    </div>
+  </div>
+</div>
+
+<div mat-dialog-actions style="display: flex; flex-direction: row; gap: 20px; padding-left: 20px;">
+  <button mat-button class="btn btn-danger" (click)="onCancel()">Cancelar</button>
+  <button mat-button class="btn btn-danger" (click)="onSubmit()">Salvar</button>
+</div>

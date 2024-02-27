@@ -1,0 +1,37 @@
+<div style="display: flex; flex-direction: row;">
+  <div class="card" >
+    <div class="buscar-pontos-coleta">
+
+      <button mat-button class="btn btn-danger" (click)="clearMapMarkers()">
+        <mat-icon aria-hidden="false" fontIcon="cached">
+        </mat-icon>Limpar Tela</button>
+    </div>
+  </div>
+
+  <div  class="card">
+    <div class="buscar-pontos-coleta">
+      <button mat-button class="btn btn-danger" (click)="pesquisarTodosLocais()">Carregar todos os pontos de coleta registrados</button>
+    </div>
+  </div>
+</div>
+  
+  <div class="card">
+    <p>Pesquisa:</p>
+    <div style="display: flex; gap: 20px;">
+      <input type="text" placeholder="Cidade" [(ngModel)]="cidade" >
+      <button mat-button class="btn btn-danger" [disabled]="!cidade" (click)="pesquisarCidade()">Pesquisar cidade</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div style="display: flex; gap: 20px;">
+      <button mat-button class="btn btn-success" (click)="openAddDescarteModal()" >Criar Ponto de Descarte</button>
+      <button mat-button class="btn btn-success" (click)="openManageModal()" >Gerenciar pontos de Descarte</button>
+    </div>
+  </div>
+    
+  <div class="map-container">
+    <div class="map-frame">
+      <div id="map"></div>
+    </div>
+  </div>
