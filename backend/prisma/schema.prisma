@@ -1,0 +1,26 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model Descarte {
+  id           String   @id @default(uuid())
+  lat          String
+  long         String
+  cep          String
+  cidade       String
+  rua          String
+  bairro       String
+  numero       String
+  estado       String
+  tipoDescarte String   @map("tipo_descarte")
+  createdAt    DateTime @default(now()) @map("created_at")
+  updateaAt    DateTime @updatedAt @map("update_at")
+}
